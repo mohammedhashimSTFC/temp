@@ -1,0 +1,47 @@
+{
+  "title": "Electric Vehicle Dataset Metadata",
+  "type": "object",
+  "required": ["datasetName", "numRecords", "vehicleType", "collectionDate"],
+  "properties": {
+    "datasetName": { "type": "string", "title": "Dataset Name" },
+    "numRecords": {
+      "type": "integer",
+      "title": "Number of Records",
+      "minimum": 0
+    },
+    "vehicleType": {
+      "type": "string",
+      "title": "Vehicle Type",
+      "enum": ["BEV", "PHEV", "Hybrid"]
+    },
+    "collectionDate": {
+      "type": "string",
+      "title": "Collection Date",
+      "format": "date"
+    },
+    "description": { "type": "string", "title": "Description" },
+    "manufacturer": { "type": "string", "title": "Manufacturer" },
+    "batteryCapacity": {
+      "type": "number",
+      "title": "Battery Capacity (kWh)",
+      "minimum": 0
+    },
+    "chargingData": {
+      "type": "object",
+      "title": "Charging Data",
+      "properties": {
+        "numChargingSessions": {
+          "type": "integer",
+          "title": "Number of Charging Sessions",
+          "minimum": 0
+        },
+        "chargingType": {
+          "type": "string",
+          "title": "Charging Type",
+          "enum": ["Slow", "Fast", "DC Fast"]
+        }
+      }
+    },
+    "geographicCoverage": { "type": "string", "title": "Geographic Coverage" }
+  }
+}
