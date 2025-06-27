@@ -9,7 +9,7 @@
         "fileType": {
           "type": "string",
           "title": "File Type",
-          "enum": ["CSV", "JSON", "PDF", "XML"]
+          "enum": ["CSV", "JSON", "PDF"]
         },
         "numFiles": {
           "type": "integer",
