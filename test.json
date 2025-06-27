@@ -1,0 +1,13 @@
+
+{
+  "type": "object",
+  "properties": {
+    "filesMetadata": "$$REF:https://raw.githubusercontent.com/mohammedhashimSTFC/temp/main/factory_building_schema.json",
+    "datasetMetadata": {
+      "anyOf": [
+        "$$REF:https://raw.githubusercontent.com/mohammedhashimSTFC/temp/main/ev_schema.json",
+        "$$REF:https://raw.githubusercontent.com/mohammedhashimSTFC/temp/main/factory_building_schema.json"
+      ]
+    }
+  }
+}
