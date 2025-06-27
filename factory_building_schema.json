@@ -1,0 +1,29 @@
+{
+  "title": "Factory Building Metadata",
+  "type": "object",
+  "required": ["buildingName", "floorArea", "constructionYear"],
+  "properties": {
+    "buildingName": { "type": "string", "title": "Building Name" },
+    "floorArea": {
+      "type": "number",
+      "title": "Floor Area (sqm)",
+      "minimum": 0
+    },
+    "constructionYear": {
+      "type": "integer",
+      "title": "Construction Year",
+      "minimum": 1800
+    },
+    "industryType": {
+      "type": "string",
+      "title": "Industry Type",
+      "enum": ["Manufacturing", "Processing", "Assembly", "Storage"]
+    },
+    "energyRating": { "type": "string", "title": "Energy Rating" },
+    "lastInspection": {
+      "type": "string",
+      "title": "Last Inspection Date",
+      "format": "date"
+    }
+  }
+}
