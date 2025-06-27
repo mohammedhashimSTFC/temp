@@ -1,0 +1,27 @@
+{
+  "title": "Dataset Files Metadata",
+  "type": "object",
+  "required": ["fileSize"],
+  "properties": {
+    "file": {
+      "type": "object",
+      "properties": {
+        "fileType": {
+          "type": "string",
+          "title": "File Type",
+          "enum": ["CSV", "JSON", "PDF"]
+        },
+        "numFiles": {
+          "type": "integer",
+          "title": "Number of Files",
+          "minimum": 1
+        },
+        "fileSize": {
+          "type": "number",
+          "title": "Total Size (GB)",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}
